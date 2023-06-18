@@ -1,4 +1,4 @@
-# SRLF
+# Salesforce Raw Logs Filter (SRLF)
 
 Filter the salesforce developer console raw logs to view only lines that contain the text specified.
 
