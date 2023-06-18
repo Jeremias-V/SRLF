@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
         <title>Salesforce Raw Logs Filter</title>
         <script src="popup.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="stylesheet" href="popup.css">
     </head>
     <body>
-        <div id="div1">
-            <input id="filter-string" type="text" id="filterValue" name="filterValue" value="USER_DEBUG">
+        <div id="divLine">
+        </div>
+        <div id="div1" class="input-group">
+            <input id="filter-string" type="text" class="form-control" name="filterValue" value="USER_DEBUG">
         </div>
         <div id="div2">
-            <button id="filter-logs-button">Filter</button>
+            <button class="btn btn-secondary" id="filter-logs-button">Filter</button>
         </div>
     </body>
 </html>

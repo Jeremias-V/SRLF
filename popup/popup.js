@@ -4,7 +4,7 @@ function filterRawLogs(string_to_filter) {
 
     const raw_logs_elements = document.querySelectorAll('[id^="textareafield-"][id$="-inputEl"]');
 
-    if (raw_logs_elements) {
+    if (raw_logs_elements && raw_logs_elements.length > 0) {
 
         const log_message = 
         'STRING TO FILTER NOT FOUND IN THIS LOG\n' + 
@@ -24,6 +24,10 @@ function filterRawLogs(string_to_filter) {
 
             }
         }
+
+    } else {
+
+        alert('No open raw logs found.');
 
     }
 
@@ -49,8 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     args: [document.getElementById('filter-string').value], // Pass the value to the function as an argument
                     function: filterRawLogs
                 });
-            }
+            } else {
 
+                alert("You can only use this at the Apex Developer Console!");
+
+            }
 
         });
 
